@@ -34,7 +34,6 @@ if user_input:
 
     # タグデータ取得
     response = requests.get(f"https://seiga.nicovideo.jp/ajax/illust/tag/list?id={illust_id}", headers=headers)
-    print(response.text)
     response = response.json()
     tags = list(map(lambda x: x["name"], response["tag_list"]))
 
